@@ -77,16 +77,24 @@ public class C01Basic {
 //		System.out.printf("%d %d %d %d\n",a,b,c,d);
 		
 		//삼항연산자(If문으로 대체가능,단순구조의 분기문)
-		Scanner sc = new Scanner(System.in);
-		System.out.print("점수입력 : " );
-		int score = sc.nextInt();
-		char grade = (score>90)? 'A':'B';
-		System.out.println("grade : " + grade);
+		
+//		Scanner sc = new Scanner(System.in);
+//		System.out.print("점수입력 : " );
+//		int score = sc.nextInt();
+//		char grade = (score>90)? 'A':'B';
+//		System.out.println("grade : " + grade);
 		
 		
 		//문제 
 		//두 수를 입력받아 큰수를 출력하세요
+		Scanner sc = new Scanner(System.in);
+		System.out.print("1 정수 : " );
+		int n1 = sc.nextInt();
+		System.out.print("2 정수 : " );
+		int n2 = sc.nextInt();
 		
+		int result=(n1>n2)?n1:n2;
+		System.out.println("큰수 : " + result);
 
 	}
 
