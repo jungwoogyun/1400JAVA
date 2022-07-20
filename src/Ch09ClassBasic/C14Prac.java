@@ -1,5 +1,22 @@
 package Ch09ClassBasic;
 
+class Song
+{
+	String title;
+	String artist;
+	int year;
+	String country;
+	Song(){}
+	Song(String title,String artist,int year,String country){
+		this.title = title; this.artist=artist ; this.year = year;
+		this.country=country;
+	}
+	void show() {
+		System.out.printf("%d년 %s국적의 %s가 부른 %s\n", year,country,artist,title);
+	}
+}
+
+
 public class C14Prac {
 //	노래 한 곡을 나타내는 Song 클래스를 작성하라. Song은 다음 필드로 구성된다.
 //
@@ -16,6 +33,10 @@ public class C14Prac {
 //	1978년 스웨덴국적의 ABBA가 부른 Dancing Queen
 	
 	public static void main(String[] args) {
-		
+		Song song1 = new Song("Dancing Queen","ABBA",1978,"스웨덴");
+		song1.show();
 	}
 }
+
+
+
