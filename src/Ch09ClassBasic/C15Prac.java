@@ -9,6 +9,39 @@ package Ch09ClassBasic;
 //- boolean contatins(Rectangle r) : 매개변수로 받은 r이 현 사각형 안에 있으면 true 리턴
 //- main() 메소드의 코드와 실행 결과는 다음과 같다
 
+class Rectangle
+{
+	int x;
+	int y;
+	int width;
+	int height;
+	Rectangle(int x,int y,int width,int height){
+		this.x = x; this.y = y; this.width=width; this.height=height;
+	}
+	int square()
+	{
+		return width*height;
+	}
+	void show()
+	{
+		System.out.printf("(%d,%d)에서 크키가 %d x %d인 사각형\n",x,y,width,height);
+
+	}
+	boolean contains(Rectangle r)
+	{
+		if
+		(
+				(this.x<r.x &&this.y<r.y) 
+				&& 
+				((this.width+this.x)>(r.width+r.x) && (this.height+this.y)>(r.height+r.y))
+		)
+		{
+				return true;
+		}
+			return false;
+	}
+	
+}
 public class C15Prac {
 	public static void main(String[] args) {
 		 	Rectangle r = new Rectangle(2, 2, 8, 7);
@@ -19,8 +52,6 @@ public class C15Prac {
 		   System.out.println("s의 면적은 "+s.square());
 		   if(t.contains(r)) System.out.println("t는 r을 포함합니다.");
 		   if(t.contains(s)) System.out.println("t는 s를 포함합니다.");
-		}
-		
 	}
 }
 //[출력예]
